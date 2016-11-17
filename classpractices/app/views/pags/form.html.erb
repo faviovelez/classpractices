@@ -1,19 +1,20 @@
 <h1>Formulario de registro IMSS</h1>
-<p>Por favor llene los campos: Nombre, CURP, Dirección, Edad y Número de IMSS</p>
+<p>Por favor llene los campos: name, CURP, Dirección, Edad y Número de IMSS</p>
 
-<%= flash[:alert] %>
-<%=form_for(@imss, url: pags_form_post_path, method: 'post') do |f| %>
-  <label for='nombre'>Nombre</label>
-  <%= f.text_field :nombre, id: 'nombre' %>
-  <label for='curp'>CURP</label>
-  <%= f.text_field :curp, id: 'curp' %>
-  <label for='direccion'>Dirección</label>
-  <%= f.text_field :direccion, id: 'direccion' %>
-  <label for='edad'>Edad</label>
-  <%= f.text_field :edad, id: 'edad' %>
-  <label for='telefono'>Teléfono</label>
-  <%= f.text_field :telefono, id: 'telefono' %>
-  <label for='no_imss'>Número de IMSS</label>
-  <%= f.text_field :no_imss, id: 'no_imss' %>
+<%= form_for(@hospital, url: pags_form_post_path, method: 'post') do |f| %>
+  <label for='name'>Nombre</label>
+  <%= f.text_field :name, id: 'name' %>
+  <label for='fed_id'>CURP</label>
+  <%= f.text_field :fed_id, id: 'fed_id' %>
+  <label for='address'>Dirección</label>
+  <%= f.text_field :address, id: 'address' %>
+  <label for='age'>Edad</label>
+  <%= f.text_field :age, id: 'age' %>
+  <label for='phone'>Teléfono</label>
+  <%= f.text_field :phone, id: 'phone' %>
+  <label for='social_security_n'>Número de IMSS</label>
+  <%= f.text_field :social_security_n, id: 'social_security_n' %>
   <button type="submit" class="btn btn-default">Enviar</button>
 <% end%>
+
+<%= flash[:alert] %>
