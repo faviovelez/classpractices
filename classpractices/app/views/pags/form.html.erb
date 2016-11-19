@@ -9,7 +9,7 @@
   <label for='address'>Dirección</label>
   <%= f.text_field :address, id: 'address' %>
   <label for='birthdate'>Fecha de nacimiento</label>
-  <%= f.date_field :age, id: 'birthdate' %>
+  <%= f.date_field :age, id: 'birthdate', value: last_age %>
   <label for='phone'>Teléfono</label>
   <%= f.text_field :phone, id: 'phone' %>
   <label for='social_security_n'>Número de IMSS</label>
@@ -17,3 +17,4 @@
   <button type="submit" class="btn btn-default">Enviar</button>
 <% end%>
 <%= flash[:alert] %>
+<%= params%>
