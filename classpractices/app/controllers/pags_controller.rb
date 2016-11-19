@@ -32,5 +32,4 @@ class PagsController < ApplicationController
     end
     message
   end
-
 end
