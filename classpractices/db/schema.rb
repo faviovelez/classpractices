@@ -24,15 +24,4 @@ ActiveRecord::Schema.define(version: 20161117181526) do
     t.datetime "updated_at",        null: false
   end
 
-  create_table "imsses", force: :cascade do |t|
-    t.string   "nombre"
-    t.string   "curp"
-    t.string   "direccion"
-    t.integer  "edad"
-    t.string   "telefono"
-    t.integer  "no_imss"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
 end
